@@ -127,6 +127,8 @@ INSTALLED_APPS = (
     'polls'
 )
 
+AUTH_USER_MODEL = 'polls.MyUser'
+
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 # A sample logging configuration. The only tangible logging
