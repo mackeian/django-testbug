@@ -28,3 +28,5 @@ class LoginTests(LiveServerTestCase):
         print 'Accessing %s... (%s) at %s' % (url, threading.currentThread(), time())
         self.browser.visit('%s%s' % (self.live_server_url, url))
         self.browser.find_by_name('submit').first.click()
+	assert 'Do it' in self.browser.html
+	assert 'testa@ccc.com' in self.browser.html
